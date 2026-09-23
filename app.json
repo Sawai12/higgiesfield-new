@@ -1,0 +1,30 @@
+{
+  "name": "Open-Higgsfield-AI Telegram Bot",
+  "description": "AI Studio Telegram Bot powered by Open-Higgsfield-AI and MongoDB",
+  "repository": "https://github.com/Sawai12/Open-Higgsfield-AI",
+  "keywords": ["telegram-bot", "higgsfield", "flux", "ai-image-generator", "mongodb"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram Bot token from @BotFather",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "MongoDB Atlas connection URI",
+      "required": true
+    },
+    "MUAPI_KEY": {
+      "description": "Muapi.ai or AI gateway API key",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
